@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    height: 100vh;
+}
+/*==========HEADER===========*/
+header {
+    display: flex;
+    background-color: rgb(107, 210, 210);
+    justify-content: space-between;
+    align-items: center;
+   
+}
+#logo a img {
+    width: 75px;
+    
+}
+#navOficial ul {
+    
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin-right: 5%;
+  
+}
+#navOficial ul li {
+    display: block;
+}
+#navOficial ul li a {
+    color: rgb(82, 150, 150);
+    text-decoration: none;
+
+}
+footer{
+    background-color: rgb(29, 21, 21);
+}
