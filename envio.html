@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politicas de Envio</title>
+    <link rel="stylesheet" href="Estilos/styles.css">
     <link rel="stylesheet" href="Estilos/paginas_extra.css">
 </head>
 <body>
@@ -12,26 +13,10 @@
             <a href="index.html"><img src="Imagenes/logo-libreria.png" alt="logo"></a>
         </figure>
         <div class="header-buttons">
-            <button id="search-trigger" aria-label="Abrir buscador">
-                <img src="Imagenes/icono-lupa.png" alt="Buscar">
-            </button>
-
             <button id="hamburger" aria-label="Abrir menú">
                 <img src="Imagenes/menu-hamburguesa.png" alt="Abrir menú" class="icono-menu">
             </button> 
         </div>
-        <div id="buscador">
-            <form action="#">
-                <input type="text" placeholder="Buscar libros, autores...">
-                <button type="submit"><img src="Imagenes/icono-lupa.png" alt="Buscar"></button>
-        </form>
-        </div>
-        <div id="mobile-search-bar">
-            <form action="#">
-                <input type="text" placeholder="¿Qué libro buscas?">
-                <button type="button" id="close-search">&times;</button>
-            </form>
-        </div>  
         <nav id="navOficial">
         <ul>
             <li>
@@ -58,8 +43,58 @@
     </nav>
     </header>
     
-    <main>
-     
+   <main class="contenedor-envio">
+        <section class="hero-envio">
+            <h1>Políticas de Envío</h1>
+            <p>En <strong>Entre Hojas</strong>, sabemos lo importante que es cada libro, por eso nos dedicamos a protegerlos y entregarlos a tiempo, garantizando que lleguen en perfectas condiciones para acompañarte en cada lectura.</p>
+        </section>
+
+        <div class="grid-envio">
+            <article class="card-politica">
+                <div class="contenedor-icono">
+                    <img src="Imagenes/icono-tiempo.png" alt="Icono Envío" class="img-politica">
+                </div>
+                <h2>Tiempos de Entrega</h2>
+                <ul>
+                    <li><strong>Arequipa:</strong> 24 a 48 horas hábiles.</li>
+                    <li><strong>Lima:</strong> 2 a 4 días hábiles.</li>
+                    <li><strong>Provincias:</strong> 3 a 7 días hábiles.</li>
+                </ul>
+            </article>
+
+            <article class="card-politica">
+                <div class="contenedor-icono">
+                    <img src="Imagenes/icono-costo.png" alt="Icono Costos" class="img-politica">
+                </div>
+                <h2>Costos de Envío</h2>
+                <p>Calculado según peso y ubicación. ¡<strong>Envío Gratis</strong> en compras mayores a S/ 150!</p>
+            </article>
+
+            <article class="card-politica">
+                <div class="contenedor-icono">
+                    <img src="Imagenes/icono-seguimiento.png" alt="Icono Seguimiento" class="img-politica">
+                </div>
+                <h2>Seguimiento</h2>
+                <p>Recibirás un código de seguimiento por WhatsApp para rastrear tu pedido en tiempo real.</p>
+            </article>
+
+            <article class="card-politica">
+                <div class="contenedor-icono">
+                    <img src="Imagenes/icono-embalaje.png" alt="Icono Embalaje" class="img-politica">
+                </div>
+                <h2>Embalaje Seguro</h2>
+                <p>Usamos plástico burbuja y cartón reforzado para que tus libros lleguen impecables.</p>
+            </article>
+        </div>
+
+        <section class="nota-importante">
+            <div>
+                <img src="Imagenes/icono-importante.png" alt="Icono importante" id="logo-importante">
+            </div>
+            <div>
+                <h3>Nota Importante:</h3>
+                <p>Entregas de lunes a sábado (9:00 AM - 6:00 PM). Asegúrate de que alguien pueda recibir el paquete.</p></div>
+        </section>
     </main>
     <footer>
         <section id="caracteristicas">
