@@ -47,6 +47,16 @@ header {
     width: 35px; 
     height: auto;
 }
+.nav-icon {
+    width: 20px;  
+    height: auto;
+    margin-right: 10px; 
+    vertical-align: middle; 
+    transition: transform 0.3s ease;
+}
+#navOficial ul li a:hover .nav-icon {
+    transform: scale(1.2);
+}
 #navOficial ul {
     display: flex;
     list-style: none;
@@ -56,6 +66,8 @@ header {
 }
 
 #navOficial ul li a {
+    display: flex;
+    align-items: center;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -203,7 +215,7 @@ footer {
     width: 100px; 
 }
 
-
+/*====RESPONSIVE======*/
 
 @media (max-width: 768px) {
     header {
@@ -248,7 +260,9 @@ footer {
         background-color: rgb(218, 231, 231);
         display: flex;
         flex-direction: column;
-        padding-top: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow-y: auto;
         transition: 0.5s ease;
         box-shadow: -5px 0 15px rgba(0,0,0,0.2);
         z-index: 2000;
@@ -281,5 +295,13 @@ footer {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+    }
+    #navOficial ul li a {
+        justify-content: center; 
+        font-size: 16px;
+        padding: 15px 0;
+    }
+    .nav-icon {
+        width: 18px; 
     }
 }
