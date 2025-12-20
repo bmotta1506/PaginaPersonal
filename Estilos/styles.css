@@ -1,11 +1,21 @@
-body{
-    margin: 0;
-    display: grid;
-    grid-template-rows:  1fr auto;
-    height: 100vh;
-    padding-top: 100px;
+* {
+    box-sizing: border-box; 
 }
-/*==========HEADER===========*/
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 100px; 
+}
+
+main {
+    flex: 1; 
+    padding: 20px;
+}
+
+/*========== HEADER ===========*/
 header {
     display: flex;
     background-color: rgb(218, 231, 231);
@@ -16,128 +26,260 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-#logo a img {
-    width: 180px;
-    
+
+#logo img {
+    width: 150px;
+    height: auto;
+}
+#hamburger {
+    display: none; 
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 0;
+}
+
+#hamburger .icono-menu {
+    width: 35px; 
+    height: auto;
 }
 #navOficial ul {
-    
     display: flex;
     list-style: none;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-right: 15%;
-
-  
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 #navOficial ul li a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 600;
     position: relative;
-    padding-bottom: 3px;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
+
+
 #navOficial ul li a::after {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: -3px;
     width: 0%;
     height: 2px;
     background-color: rgb(82, 150, 150);
-    transition:  0.5s ease;
+    transition: 0.3s ease;
     transform: translateX(-50%);
-
 }
 
-#navOficial ul li a:hover::after {
-    width: 100%;
+#navOficial ul li a:hover::after { 
+    width: 100%; 
+}
+#navOficial ul li a:hover { 
+    color: rgb(34, 100, 100); 
 }
 
-#navOficial ul li a:hover {
-    color: rgb(34, 100, 100);
-}
-footer{
+/*========== FOOTER ===========*/
+footer {
     background-color: rgb(29, 21, 21);
     color: antiquewhite;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    padding: 40px 0 20px 0;
 }
-#info-footer {
-    padding-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 5%;
-    margin-right: 5%;
-    gap: 20px;
 
+#info-footer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin: 0 5%;
+    gap: 30px;
 }
-#info-footer h4 {
-    margin: 0;
-    padding: 0;
+
+.contenido-ft, #nuestrasRedes {
+    flex: 1;
+    min-width: 200px; 
 }
-#info-footer ul {
-    margin: 0;
-    padding-left: 0;        
+
+#nuestrasRedes img[alt="logo"] {
+    width: 150px;
+    margin-bottom: 15px;
 }
-#nuestrasRedes img {
-    width: 200px;
-}
-#nuestrasRedes {
-    width: 200px;
-}
-#nuestrasRedes ul li a img{
-    width: 20px;
-}
+
 #nuestrasRedes ul {
     display: flex;
     list-style: none;
-    align-items: center;
-    gap: 15px;
-    margin-left: 10%;
-    
-}
-.contenido-ft {
-    display: flex;
-    flex-direction: column;
+    padding: 0;
     gap: 15px;
 }
+
+#nuestrasRedes ul li a img { width: 25px; }
+
 .contenido-ft h4 {
-    font-weight: 600;
-    font-size: 11px;
-    
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
+
 .contenido-ft ul {
     list-style: none;
-    
+    padding: 0;
 }
+
+.contenido-ft ul li { margin-bottom: 8px; }
+
 .contenido-ft ul li a {
     color: aliceblue;
-    font-size: 10px;
+    font-size: 11px;
     text-decoration: none;
     transition: 0.3s;
 }
-.contenido-ft ul li a:hover {
+
+.contenido-ft ul li a:hover { 
+    color: rgb(163, 163, 183); 
+}   
+
+#email {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+}
+#acepto {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    accent-color: rgb(82, 150, 150);
+}
+.contenido-ft label {
+    color: aliceblue;
+    font-size: 11px;
+}
+.contenido-ft label a {
+    color: aliceblue;
+    transition: 0.3s;
+    font-size: 12px;
+}
+
+.contenido-ft label a:hover {
     color: rgb(163, 163, 183) !important;
 }
+
+#boton {
+    background-color: rgb(82, 150, 150);
+    width: 100%;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#boton:hover { 
+    background-color: rgb(43, 81, 81); 
+}
+
 #final-footer {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    margin: auto 5% auto 5%;
+    align-items: center;
+    margin: 20px 5% 0 5%;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
-#final-footer p {
-    font-size: 10px;
+
+#final-footer p { 
+    font-size: 10px; 
 }
-#final-footer img{
-    width: 150px;
-    padding-bottom: 1%;
+#final-footer img { 
+    width: 100px; 
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 10px 5%;
+        height: 80px; 
+    }
+
+    
+    body { 
+        padding-top: 80px; 
+    }
+
+    #logo img {
+        width: 130px; 
+    }
+
+    #hamburger {
+        display: block; 
+        margin-right: 0; 
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 3000;
+    }
+
+    #hamburger img {
+        width: 30px; 
+        height: auto;
+        display: block;
+    }
+
+    #navOficial {
+        position: fixed;
+        right: -100%; 
+        top: 0;
+        width: 40%;
+        height: 100vh;
+        background-color: rgb(218, 231, 231);
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        transition: 0.5s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        z-index: 2000;
+    }
+
+    #navOficial.active {
+        right: 0; 
+    }
+
+    #navOficial ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-right: 0;
+    }
+
+  
+    #info-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    #nuestrasRedes ul {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    #final-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 }
