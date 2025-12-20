@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politicas de Envio</title>
-    <link rel="stylesheet" href="Estilos/styles.css">
+    <link rel="stylesheet" href="Estilos/paginas_extra.css">
 </head>
 <body>
     <header>
         <figure id="logo">
             <a href="index.html"><img src="Imagenes/logo-libreria.png" alt="logo"></a>
         </figure>
-        <button id="hamburger" aria-label="Abrir menú">
-            <img src="Imagenes/menu-hamburguesa.png" alt="Abrir menú" class="icono-menu">
-        </button>   
+        <div class="header-buttons">
+            <button id="search-trigger" aria-label="Abrir buscador">
+                <img src="Imagenes/icono-lupa.png" alt="Buscar">
+            </button>
+
+            <button id="hamburger" aria-label="Abrir menú">
+                <img src="Imagenes/menu-hamburguesa.png" alt="Abrir menú" class="icono-menu">
+            </button> 
+        </div>
+        <div id="buscador">
+            <form action="#">
+                <input type="text" placeholder="Buscar libros, autores...">
+                <button type="submit"><img src="Imagenes/icono-lupa.png" alt="Buscar"></button>
+        </form>
+        </div>
+        <div id="mobile-search-bar">
+            <form action="#">
+                <input type="text" placeholder="¿Qué libro buscas?">
+                <button type="button" id="close-search">&times;</button>
+            </form>
+        </div>  
         <nav id="navOficial">
-    
         <ul>
-            
             <li>
                 <a href="blog.html">
                     <img src="Imagenes/logo-blog.png" alt="" class="nav-icon">Blog
@@ -38,7 +54,6 @@
                     <img src="Imagenes/logo-carrito.png" alt="" class="nav-icon">Carrito
                 </a>
             </li>
-            
         </ul>
     </nav>
     </header>
@@ -51,14 +66,14 @@
             <div class="item-caracteristica">
                 <img src="Imagenes/icono-envio.png" alt="Envío">
                 <div class="texto-car">
-                    <h3>Envío a todo el Perú</h3>
-                    <p>Llevamos tus productos a tu casa</p>
+                    <h3>Envío para todo el Perú</h3>
+                    <p>Tus productos directo a tu casa</p>
                 </div>
             </div>
             <div class="item-caracteristica">
-                <img src="Imagenes/icono-seguro.png" alt="Compra segura">
+                <img src="Imagenes/icono-segura.png" alt="Compra segura">
                 <div class="texto-car">
-                    <h3>Compra Seguras</h3>
+                    <h3>100% Seguras</h3>
                     <p>Tus compras son 100% protegidas</p>
                 </div>
             </div>

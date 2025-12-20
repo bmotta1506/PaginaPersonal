@@ -34,6 +34,14 @@ header {
     width: 150px;
     height: auto;
 }
+#search-trigger, #mobile-search-bar {
+    display: none;
+}
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 #hamburger {
     display: none; 
     background: transparent;
@@ -42,7 +50,6 @@ header {
     z-index: 1100;
     padding: 0;
 }
-
 #hamburger .icono-menu {
     width: 35px; 
     height: auto;
@@ -50,9 +57,30 @@ header {
 .nav-icon {
     width: 20px;  
     height: auto;
-    margin-right: 10px; 
+    margin-right: 8px; 
     vertical-align: middle; 
     transition: transform 0.3s ease;
+}
+#buscador form {
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+}
+#buscador input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+#buscador button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#buscador button img { 
+    width: 20px; 
 }
 #navOficial ul li a:hover .nav-icon {
     transform: scale(1.2);
@@ -60,7 +88,7 @@ header {
 #navOficial ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
@@ -102,15 +130,49 @@ footer {
     background-color: rgb(29, 21, 21);
     color: antiquewhite;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 40px 0 20px 0;
+    padding: 0px 0 20px 0;
+}
+#caracteristicas {
+    background-color: #212c3f; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 5%;
+    flex-wrap: wrap; 
 }
 
+.item-caracteristica {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.item-caracteristica img {
+    width: 45px; 
+    height: auto;
+}
+
+.texto-car h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Verdana, sans-serif;
+}
+
+.texto-car p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.9;
+}
 #info-footer {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
     margin: 0 5%;
     gap: 30px;
+    padding-top: 20px;
 }
 
 .contenido-ft, #nuestrasRedes {
@@ -225,20 +287,29 @@ footer {
         padding: 10px 5%;
         height: 80px; 
     }
-
-    
     body { 
         padding-top: 80px; 
     }
-
     #logo img {
         width: 130px; 
     }
-
+    #buscador { 
+        display: none; 
+    }
+    #search-trigger {
+        display: block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    #search-trigger img {
+        width: 25px;
+        height: auto;
+    }
     #hamburger {
         display: block; 
         margin-right: 0; 
-        background: transparent;
+        background: none;
         border: none;
         cursor: pointer;
         position: relative;
@@ -250,7 +321,43 @@ footer {
         height: auto;
         display: block;
     }
-
+    #mobile-search-bar {
+        position: absolute;
+        top: -100px; 
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: white;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        transition: 0.4s ease-in-out;
+        z-index: 4000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    #mobile-search-bar.active {
+        top: 0; 
+    }
+    #mobile-search-bar form {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+    #mobile-search-bar input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+    #close-search {
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: rgb(82, 150, 150);
+        cursor: pointer;
+    }
     #navOficial {
         position: fixed;
         right: -100%; 
@@ -278,8 +385,17 @@ footer {
         gap: 30px;
         margin-right: 0;
     }
-
-  
+    #caracteristicas {
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 25px;
+        padding: 40px 15%;
+    }
+    
+    .item-caracteristica {
+        width: 100%;
+    }
+    
     #info-footer {
         flex-direction: column;
         text-align: center;
