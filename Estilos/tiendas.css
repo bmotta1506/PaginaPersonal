@@ -1,0 +1,81 @@
+.contenedor-tiendas {
+    max-width: 2000px;
+    margin: 50px auto 60px;
+    padding: 0 5%;
+    font-family: Verdana, sans-serif;
+}
+
+.hero-tiendas {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-tiendas h1 {
+    color: rgb(82, 150, 150);
+    font-size: 2.5rem;
+}
+
+.grid-tiendas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-tienda {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 4px solid rgb(218, 231, 231);
+}
+
+.card-tienda:hover {
+    transform: scale(1.02);
+}
+
+.img-tienda {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-tienda {
+    padding: 20px;
+}
+
+.info-tienda h2 {
+    color: rgb(34, 100, 100);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.info-tienda p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.btn-mapa {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: rgb(82, 150, 150);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-mapa:hover {
+    background-color: rgb(34, 100, 100);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-tiendas h1 {
+        font-size: 1.8rem;
+    }
+}
