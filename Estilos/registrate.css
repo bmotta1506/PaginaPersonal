@@ -1,0 +1,121 @@
+.contenedor-cuenta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 60px; 
+    background-color: #f4f7f7;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tarjeta-cuenta {
+    background: white;
+    width: 100%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.img-cuenta {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.fila-input {
+    display: flex;
+    gap: 15px;
+}
+
+.grupo-entrada {
+    text-align: left;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.grupo-entrada label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.grupo-entrada input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.grupo-entrada input:focus {
+    border-color: rgb(82, 150, 150);
+    box-shadow: 0 0 0 3px rgba(82, 150, 150, 0.1);
+}
+
+.terminos-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    font-size: 13px;
+    text-align: left;
+
+}
+ .terminos-check a {
+    color: #000000;
+    transition: 0.3s ease;
+ }
+
+.terminos-check a:hover {
+    color: #636262;
+}
+#reg-terminos {
+    cursor: pointer;
+    accent-color: rgb(82, 150, 150);
+}
+.boton-cuenta {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(82, 150, 150);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-cuenta:hover {
+    background-color: rgb(34, 100, 100);
+}
+
+.pie-cuenta {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.pie-cuenta a {
+    color: rgb(82, 150, 150);
+    font-weight: 700;
+    text-decoration: none; 
+    transition: 0.3s ease;
+} 
+.pie-cuenta a:hover {
+    color: rgb(34, 100, 100);
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+    .fila-input {
+        flex-direction: column;
+        gap: 0;
+    }
+    .tarjeta-cuenta {
+        padding: 25px;
+    }
+}

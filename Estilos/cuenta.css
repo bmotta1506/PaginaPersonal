@@ -80,6 +80,10 @@
     color: rgb(82, 150, 150);
     font-weight: 600;
     text-decoration: none;
+    transition: 0.3s ease;
+}
+.pie-login a:hover {
+    color:rgb(34, 100, 100);
 }
 
 @media (max-width: 480px) {
