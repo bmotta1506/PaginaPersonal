@@ -1,0 +1,48 @@
+.contenedor-terminos {
+    max-width: 850px; 
+    margin: 60px auto; 
+    padding: 0 25px;
+    font-family: Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+.hero-terminos {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-terminos h1 {
+    color: rgb(82, 150, 150);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-terminos p {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.cuerpo-terminos article {
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.cuerpo-terminos h2 {
+    color: rgb(34, 100, 100);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  
+}
+
+@media (max-width: 768px) {
+    .contenedor-terminos {
+        margin: 30px auto;
+        text-align: left; 
+    }
+
+    .hero-terminos h1 {
+        font-size: 1.7rem;
+    }
+}

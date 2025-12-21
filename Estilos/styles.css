@@ -276,6 +276,17 @@ footer {
 #final-footer img { 
     width: 100px; 
 }
+#email:invalid:not(:placeholder-shown) {
+    border: 2px solid #ff4d4d;
+}
+
+#email:valid {
+    border: 2px solid #529696;
+}
+
+#form-suscripcion input:valid ~ #boton {
+    background-color: rgb(34, 100, 100);
+}
 
 /*====RESPONSIVE======*/
 

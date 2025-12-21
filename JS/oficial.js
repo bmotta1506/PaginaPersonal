@@ -33,3 +33,20 @@ if (closeSearch) {
         mobileSearch.classList.remove('active');
     });
 }
+// Validación del formulario de suscripción
+const formSuscripcion = document.getElementById('form-suscripcion');
+
+if (formSuscripcion) {
+    formSuscripcion.addEventListener('submit', (e) => {
+       
+        e.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const acepto = document.getElementById('acepto').checked;
+
+        if (email && acepto) {
+            alert(`¡Gracias por suscribirte con ${email}! Pronto recibirás nuestras ofertas.`);
+            formSuscripcion.reset(); 
+        }
+    });
+}
