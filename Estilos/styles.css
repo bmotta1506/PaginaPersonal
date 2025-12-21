@@ -287,6 +287,33 @@ footer {
 #form-suscripcion input:valid ~ #boton {
     background-color: rgb(34, 100, 100);
 }
+/*====BURBUJA===*/
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;  
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 5000; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-btn img {
+    width: 60px; 
+    height: auto;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
 
 /*====RESPONSIVE======*/
 
@@ -430,5 +457,15 @@ footer {
     }
     .nav-icon {
         width: 18px; 
+    }
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-btn img {
+        width: 60px;
     }
 }
