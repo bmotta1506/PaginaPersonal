@@ -16,6 +16,8 @@
 .hero-envio h1 {
     color: rgb(82, 150, 150);
     font-size: 3rem;
+    border-bottom: 3px solid rgb(218, 231, 231);
+    display: inline-block;
     margin-bottom: 10px;
 }
 
