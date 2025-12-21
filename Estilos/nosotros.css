@@ -1,0 +1,122 @@
+.contenedor-nosotros {
+    max-width: 1100px;
+    margin: 50px auto 60px;
+    padding: 0 5%;
+    font-family: Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.seccion-intro {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.texto-intro {
+    flex: 1;
+}
+
+.texto-intro h1 {
+    color: rgb(82, 150, 150);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.imagen-intro {
+    flex: 1;
+}
+
+.imagen-intro img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 0px rgb(218, 231, 231);
+}
+
+.mision-vision {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.contenedor-icono-nosotros {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-nosotros-icon {
+    width: 70px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.img-valor {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card-nosotros {
+    flex: 1;
+    background: #f9fdfd;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.icono-nosotros {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card-nosotros h2 {
+    color: rgb(34, 100, 100);
+    margin-bottom: 15px;
+}
+
+.nuestros-valores {
+    text-align: center;
+    background: rgb(218, 231, 231);
+    padding: 60px 40px;
+    border-radius: 20px;
+}
+
+.nuestros-valores h2 {
+    margin-bottom: 40px;
+    color: rgb(34, 100, 100);
+}
+
+.grid-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.valor h3 {
+    color: rgb(82, 150, 150);
+    margin-bottom: 10px;
+}
+
+.card-nosotros:hover .img-nosotros-icon,
+.valor:hover .img-valor {
+    transform: scale(1.15);
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .seccion-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mision-vision {
+        flex-direction: column;
+    }
+
+    .texto-intro h1 {
+        font-size: 2rem;
+    }
+}
