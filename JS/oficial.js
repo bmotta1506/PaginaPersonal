@@ -50,3 +50,15 @@ if (formSuscripcion) {
         }
     });
 }
+//Pagina ingresar cuenta
+const formLogin = document.getElementById('form-login');
+if (formLogin) {
+    formLogin.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('login-email').value;
+        alert(`¡Bienvenido de nuevo! Iniciando sesión con: ${email}`);
+        
+        window.location.href = "index.html"; 
+    });
+}
+
