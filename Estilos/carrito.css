@@ -1,0 +1,127 @@
+.contenedor-carrito {
+    max-width: 1200px;
+    margin: 120px auto 60px;
+    padding: 0 5%;
+    font-family: Verdana, sans-serif;
+}
+
+.contenedor-carrito h1 {
+    color: rgb(82, 150, 150);
+    margin-bottom: 30px;
+}
+
+.carrito-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.productos-carrito {
+    flex: 2;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.item-carrito img {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detalles-item { flex: 2; }
+.detalles-item h3 { color: #333; margin-bottom: 5px; }
+.detalles-item p { color: #777; font-size: 0.9rem; }
+
+.cantidad-controles {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f4fafa;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.btn-cantidad {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: rgb(82, 150, 150);
+    font-weight: bold;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-eliminar:hover { transform: scale(1.2); }
+.btn-eliminar img { width: 25px; }
+
+.resumen-compra {
+    flex: 1;
+    background: #f9fdfd;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e0eeee;
+    position: sticky;
+    top: 120px;
+}
+
+.fila-resumen {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgb(34, 100, 100);
+    margin-top: 10px;
+}
+
+.btn-pagar {
+    width: 100%;
+    padding: 15px;
+    background: rgb(82, 150, 150);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-pagar:hover { background: rgb(34, 100, 100); transform: translateY(-3px); }
+
+.seguir-comprando {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .carrito-flex { flex-direction: column; }
+    .resumen-compra { width: 100%; position: static; }
+    .item-carrito { flex-wrap: wrap; justify-content: space-between; }
+}
