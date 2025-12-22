@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../Estilos/styles.css">
+    <link rel="stylesheet" href="../Estilos/blog.css">
+    
+</head>
+<body>
+    <header>
+        <figure id="logo">
+            <a href="index.html"><img src="../Imagenes/logo-libreria.png" alt="logo"></a>
+        </figure>
+        <div class="header-buttons">
+            <button id="search-trigger" aria-label="Abrir buscador">
+                <img src="../Imagenes/icono-lupa.png" alt="Buscar">
+            </button>
+
+            <button id="hamburger" aria-label="Abrir menú">
+                <img src="../Imagenes/menu-hamburguesa.png" alt="Abrir menú" class="icono-menu">
+            </button> 
+        </div>
+        <div id="buscador">
+            <form action="#">
+                <input type="text" placeholder="Buscar libros, autores...">
+                <button type="submit"><img src="../Imagenes/icono-lupa.png" alt="Buscar"></button>
+        </form>
+        </div>
+        <div id="mobile-search-bar">
+            <form action="#">
+                <input type="text" placeholder="¿Qué libro buscas?">
+                <button type="button" id="close-search">&times;</button>
+            </form>
+        </div>  
+        <nav id="navOficial">
+        <ul>
+            <li>
+                <a href="blog.html" id="">
+                    <img src="../Imagenes/logo-blog.png" alt="" class="nav-icon">Blog
+                </a>
+            </li>
+            <li>
+                <a href="tiendas.html">
+                    <img src="../Imagenes/logo - tiendas.png" alt="" class="nav-icon">Tiendas
+                </a>
+            </li>
+            <li>
+                <a href="registrate.html">
+                    <img src="../Imagenes/logo-registro.png" alt="" class="nav-icon">Registrate
+                </a>
+            </li>
+            <li>
+                <a href="carrito.html" id="cart-icon-nav">
+                    <img src="../Imagenes/logo-carrito.png" alt="" class="nav-icon">Carrito
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main class="contenedor-blog">
+        <section class="carrusel-destacados">
+            <div class="carrusel-contenedor">
+                <div class="carrusel-slide active">
+                    <img src="../Imagenes/banner1.jpg" alt="Banner 1">
+                    <div class="caption">Novedades de Verano</div>
+                </div>
+                <div class="carrusel-slide">
+                    <img src="../Imagenes/banner2.jpg" alt="Banner 2">
+                    <div class="caption">Especial Terror: 20% OFF</div>
+                </div>
+                <div class="carrusel-slide">
+                    <img src="../Imagenes/banner3.jpg" alt="Banner 3">
+                    <div class="caption">Sagas Juveniles del Mes</div>
+                </div>
+                <div class="carrusel-slide">
+                    <img src="../Imagenes/banner4.jpg" alt="Banner 4">
+                    <div class="caption">Clásicos Inmortales</div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+
+        <section class="seccion-categorias">
+            <h2 class="titulo-categoria">Literatura Nacional</h2>
+            <div class="grid-libros">
+
+                <article class="card-libro" 
+                    data-titulo="Los Ríos Profundos" 
+                    data-autor="José María Arguedas" 
+                    data-anio="1958" 
+                    data-precio="S/ 50.00" 
+                    data-resumen="Novela indigenista que refleja la identidad andina y mestiza a través de la mirada de un joven en los Andes.">
+                    <img src="../Libros/rios-profundos.jpg" alt="Los Ríos Profundos">
+                    <h3>Los Ríos Profundos</h3>
+                    <p>José María Arguedas</p>
+                    <span class="precio">S/ 50.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="Yawar Fiesta" 
+                    data-autor="José María Arguedas" 
+                    data-anio="1941" 
+                    data-precio="S/ 42.00" 
+                    data-resumen="Relato que muestra el enfrentamiento cultural entre el mundo andino y el poder central.">
+                    <img src="../Libros/yawar-fiesta.jpg" alt="Yawar Fiesta">
+                    <h3>Yawar Fiesta</h3>
+                    <p>José María Arguedas</p>
+                    <span class="precio">S/ 42.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="La Ciudad y los Perros" 
+                    data-autor="Mario Vargas Llosa" 
+                    data-anio="1963" 
+                    data-precio="S/ 55.00" 
+                    data-resumen="Crítica a la violencia y disciplina militar en un colegio castrense de Lima.">
+                    <img src="../Libros/la-ciudad-y-los-perros.jpg" alt="La Ciudad y los Perros">
+                    <h3>La Ciudad y los Perros</h3>
+                    <p>Mario Vargas Llosa</p>
+                    <span class="precio">S/ 55.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="Un Mundo para Julius" 
+                    data-autor="Alfredo Bryce Echenique" 
+                    data-anio="1970" 
+                    data-precio="S/ 48.00" 
+                    data-resumen="Retrato crítico y humorístico de la aristocracia limeña a través de un niño.">
+                    <img src="../Libros/el-mundo-de-julius.jpg" alt="Un Mundo para Julius">
+                    <h3>Un Mundo para Julius</h3>
+                    <p>Alfredo Bryce Echenique</p>
+                    <span class="precio">S/ 48.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="Abril Rojo" 
+                    data-autor="Santiago Roncagliolo" 
+                    data-anio="2006" 
+                    data-precio="S/ 40.00" 
+                    data-resumen="Novela policial ambientada en Ayacucho durante el periodo postconflicto.">
+                    <img src="../Libros/abril-rojo.jpg" alt="Abril Rojo">
+                    <h3>Abril Rojo</h3>
+                    <p>Santiago Roncagliolo</p>
+                    <span class="precio">S/ 40.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="La Palabra del Mudo" 
+                    data-autor="Julio Ramón Ribeyro" 
+                    data-anio="1953" 
+                    data-precio="S/ 38.00" 
+                    data-resumen="Conjunto de cuentos que retratan la vida cotidiana y las frustraciones urbanas.">
+                    <img src="../Libros/LA-PALABRA-DEL-MUDO.jpg" alt="La Palabra del Mudo">
+                    <h3>La Palabra del Mudo</h3>
+                    <p>Julio Ramón Ribeyro</p>
+                    <span class="precio">S/ 38.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+            </div>
+
+            <h2 class="titulo-categoria">Romance</h2>
+            <div class="grid-libros">
+
+                <article class="card-libro" 
+                    data-titulo="Orgullo y Prejuicio" 
+                    data-autor="Jane Austen" 
+                    data-anio="1813" 
+                    data-precio="S/ 48.00" 
+                    data-resumen="Historia de amor marcada por el orgullo, los prejuicios sociales y el crecimiento personal.">
+                    <img src="../Libros/orgullo-prejuicio.jpg" alt="Orgullo y Prejuicio">
+                    <h3>Orgullo y Prejuicio</h3>
+                    <p>Jane Austen</p>
+                    <span class="precio">S/ 48.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="Bajo la Misma Estrella" 
+                    data-autor="John Green" 
+                    data-anio="2012" 
+                    data-precio="S/ 45.00" 
+                    data-resumen="Dos jóvenes se enamoran mientras enfrentan una enfermedad que pone a prueba su amor.">
+                    <img src="../Libros/bajo-la-misma-estrella.jpg" alt="Bajo la Misma Estrella">
+                    <h3>Bajo la Misma Estrella</h3>
+                    <p>John Green</p>
+                    <span class="precio">S/ 45.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="Yo Antes de Ti" 
+                    data-autor="Jojo Moyes" 
+                    data-anio="2012" 
+                    data-precio="S/ 50.00" 
+                    data-resumen="Una relación inesperada que transforma la forma de ver la vida y el amor.">
+                    <img src="../Libros/yo-antes-de-ti.jpg" alt="Yo Antes de Ti">
+                    <h3>Yo Antes de Ti</h3>
+                    <p>Jojo Moyes</p>
+                    <span class="precio">S/ 50.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="Cumbres Borrascosas" 
+                    data-autor="Emily Brontë" 
+                    data-anio="1847" 
+                    data-precio="S/ 47.00" 
+                    data-resumen="Una historia de amor intenso y destructivo ambientada en los páramos ingleses.">
+                    <img src="../Libros/cumbres-borrascosas.jpg" alt="Cumbres Borrascosas">
+                    <h3>Cumbres Borrascosas</h3>
+                    <p>Emily Brontë</p>
+                    <span class="precio">S/ 47.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="El Cuaderno de Noah" 
+                    data-autor="Nicholas Sparks" 
+                    data-anio="1996" 
+                    data-precio="S/ 46.00" 
+                    data-resumen="Un amor que perdura a pesar del paso del tiempo y los obstáculos de la vida.">
+                    <img src="../Libros/el-cuaderno-de-noah.jpg" alt="El Cuaderno de Noah">
+                    <h3>El Cuaderno de Noah</h3>
+                    <p>Nicholas Sparks</p>
+                    <span class="precio">S/ 46.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+                <article class="card-libro" 
+                    data-titulo="Como Agua para Chocolate" 
+                    data-autor="Laura Esquivel" 
+                    data-anio="1989" 
+                    data-precio="S/ 44.00" 
+                    data-resumen="Una historia de amor prohibido mezclada con tradición, emociones y realismo mágico.">
+                    <img src="../Libros/como-agua-para-chocolate.jpg" alt="Como Agua para Chocolate">
+                    <h3>Como Agua para Chocolate</h3>
+                    <p>Laura Esquivel</p>
+                    <span class="precio">S/ 44.00</span>
+                    <button class="btn-agregar">Añadir</button>
+                </article>
+
+            </div>
+
+            <h2 class="titulo-categoria">Saga FNAF</h2>
+
+                <div class="grid-libros">
+
+                    <article class="card-libro" 
+                        data-titulo="Five Nights at Freddy's: The Silver Eyes" 
+                        data-autor="Scott Cawthon & Kira Breed-Wrisley" 
+                        data-anio="2015" 
+                        data-precio="S/ 55.00" 
+                        data-resumen="Charlie regresa a su pueblo natal y descubre los oscuros secretos detrás de Freddy Fazbear's Pizza.">
+                        <img src="../Libros/the-silver-eyes.jpg" alt="The Silver Eyes">
+                        <h3>The Silver Eyes</h3>
+                        <p>Scott Cawthon</p>
+                        <span class="precio">S/ 55.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="Five Nights at Freddy's: The Twisted Ones" 
+                        data-autor="Scott Cawthon & Kira Breed-Wrisley" 
+                        data-anio="2017" 
+                        data-precio="S/ 58.00" 
+                        data-resumen="Charlie enfrenta animatrónicos aún más terroríficos que amenazan su realidad.">
+                        <img src="../Libros/the-twisted ones.jpg" alt="The Twisted Ones">
+                        <h3>The Twisted Ones</h3>
+                        <p>Scott Cawthon</p>
+                        <span class="precio">S/ 58.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="Five Nights at Freddy's: The Fourth Closet" 
+                        data-autor="Scott Cawthon & Kira Breed-Wrisley" 
+                        data-anio="2018" 
+                        data-precio="S/ 60.00" 
+                        data-resumen="El cierre de la trilogía con revelaciones impactantes sobre los animatrónicos y su creador.">
+                        <img src="../Libros/the-fourth-closet.jpg" alt="The Fourth Closet">
+                        <h3>The Fourth Closet</h3>
+                        <p>Scott Cawthon</p>
+                        <span class="precio">S/ 60.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="Five Nights at Freddy's: Fazbear Frights #1" 
+                        data-autor="Scott Cawthon" 
+                        data-anio="2019" 
+                        data-precio="S/ 45.00" 
+                        data-resumen="Colección de historias cortas de terror ambientadas en el universo FNAF.">
+                        <img src="../Libros/FF1.jpg" alt="Fazbear Frights 1">
+                        <h3>Fazbear Frights #1</h3>
+                        <p>Scott Cawthon</p>
+                        <span class="precio">S/ 45.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="Five Nights at Freddy's: Fazbear Frights #2" 
+                        data-autor="Scott Cawthon" 
+                        data-anio="2019" 
+                        data-precio="S/ 45.00" 
+                        data-resumen="Nuevas historias que exploran el horror psicológico del mundo Fazbear.">
+                        <img src="../Libros/FF2.jpg" alt="Fazbear Frights 2">
+                        <h3>Fazbear Frights #2</h3>
+                        <p>Scott Cawthon</p>
+                        <span class="precio">S/ 45.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="Five Nights at Freddy's: Fazbear Frights #3" 
+                        data-autor="Scott Cawthon" 
+                        data-anio="2020" 
+                        data-precio="S/ 45.00" 
+                        data-resumen="Relatos inquietantes que amplían el lore oscuro de Five Nights at Freddy's.">
+                        <img src="../Libros/FF3.jpg" alt="Fazbear Frights 3">
+                        <h3>Fazbear Frights #3</h3>
+                        <p>Scott Cawthon</p>
+                        <span class="precio">S/ 45.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                </div>
+                
+            <h2 class="titulo-categoria">Terror</h2>
+
+                <div class="grid-libros">
+
+                    <article class="card-libro" 
+                        data-titulo="It (Eso)" 
+                        data-autor="Stephen King" 
+                        data-anio="1986" 
+                        data-precio="S/ 89.00" 
+                        data-resumen="Un payaso terrorífico acecha a un grupo de niños en el pueblo de Derry.">
+                        <img src="../Libros/IT.jpg" alt="It">
+                        <h3>It (Eso)</h3>
+                        <p>Stephen King</p>
+                        <span class="precio">S/ 89.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="El Resplandor" 
+                        data-autor="Stephen King" 
+                        data-anio="1977" 
+                        data-precio="S/ 78.00" 
+                        data-resumen="Una familia queda atrapada en un hotel donde fuerzas malignas despiertan la locura.">
+                        <img src="../Libros/el-resplandor.jpg" alt="El Resplandor">
+                        <h3>El Resplandor</h3>
+                        <p>Stephen King</p>
+                        <span class="precio">S/ 78.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="Drácula" 
+                        data-autor="Bram Stoker" 
+                        data-anio="1897" 
+                        data-precio="S/ 65.00" 
+                        data-resumen="El clásico relato del conde vampiro que siembra el terror en Inglaterra.">
+                        <img src="../Libros/dracula.jpg" alt="Drácula">
+                        <h3>Drácula</h3>
+                        <p>Bram Stoker</p>
+                        <span class="precio">S/ 65.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="Frankenstein" 
+                        data-autor="Mary Shelley" 
+                        data-anio="1818" 
+                        data-precio="S/ 60.00" 
+                        data-resumen="Un científico crea una criatura que se convierte en una tragedia aterradora.">
+                        <img src="../Libros/franken.jpg" alt="Frankenstein">
+                        <h3>Frankenstein</h3>
+                        <p>Mary Shelley</p>
+                        <span class="precio">S/ 60.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="El Exorcista" 
+                        data-autor="William Peter Blatty" 
+                        data-anio="1971" 
+                        data-precio="S/ 72.00" 
+                        data-resumen="La posesión demoníaca de una niña desafía la fe y la razón.">
+                        <img src="../Libros/el-exorcista.jpg" alt="El Exorcista">
+                        <h3>El Exorcista</h3>
+                        <p>William P. Blatty</p>
+                        <span class="precio">S/ 72.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                    <article class="card-libro" 
+                        data-titulo="La Llamada de Cthulhu" 
+                        data-autor="H. P. Lovecraft" 
+                        data-anio="1928" 
+                        data-precio="S/ 58.00" 
+                        data-resumen="Relatos de horror cósmico donde la humanidad enfrenta entidades incomprensibles.">
+                        <img src="../Libros/la-llamada.jpg" alt="Cthulhu">
+                        <h3>La Llamada de Cthulhu</h3>
+                        <p>H. P. Lovecraft</p>
+                        <span class="precio">S/ 58.00</span>
+                        <button class="btn-agregar">Añadir</button>
+                    </article>
+
+                </div>
+
+            
+            </section>
+    </main>
+
+    <div id="modal-libro" class="modal">
+        <div class="contenido-modal">
+            <span class="cerrar-modal">&times;</span>
+            <div class="detalles-libro">
+                <img src="" alt="Portada" id="modal-img">
+                <div class="texto-detalles">
+                    <h2 id="modal-titulo"></h2>
+                    <p><strong>Autor:</strong> <span id="modal-autor"></span></p>
+                    <p><strong>Año:</strong> <span id="modal-anio"></span></p>
+                    <p><strong>Precio:</strong> <span id="modal-precio"></span></p>
+                    <p><strong>Resumen:</strong> <span id="modal-resumen"></span></p>
+                    <button class="btn-agregar-modal">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <section id="caracteristicas">
+            <div class="item-caracteristica">
+                <img src="../Imagenes/icono-envio.png" alt="Envío">
+                <div class="texto-car">
+                    <h3>Envío para todo el Perú</h3>
+                    <p>Tus productos directo a tu casa</p>
+                </div>
+            </div>
+            <div class="item-caracteristica">
+                <img src="../Imagenes/icono-segura.png" alt="Compra segura">
+                <div class="texto-car">
+                    <h3>100% Seguras</h3>
+                    <p>Tus compras son 100% protegidas</p>
+                </div>
+            </div>
+            <div class="item-caracteristica">
+                <img src="../Imagenes/icono-equipo.png" alt="Soporte">
+                <div class="texto-car">
+                    <h3>Equipo Especializado</h3>
+                    <p>Te ayudamos en lo que necesites</p>
+                </div>
+            </div>
+        </section>
+       <section id="info-footer">
+            <div id="nuestrasRedes">
+                <a href="index.html"><img src="../Imagenes/logo-libreria.png" alt="logo"></a>
+                <h4>NUESTRAS REDES</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank"><img src="../Imagenes/FB-logo.png" alt="FB"></a></li>
+                        <li><a href="https://www.tiktok.com/" target="_blank"><img src="../Imagenes/TK-logo.png" alt="TK"></a></li>
+                        <li><a href="https://x.com/" target="_blank"><img src="../Imagenes/X-logo (2).png" alt="X"></a></li>
+                    </ul>
+            </div>
+            <div class="contenido-ft">
+                <h4>SOBRE NOSOTROS</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="tiendas.html">Nuestras tiendas</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+            </div>
+            <div class="contenido-ft">
+                <h4>MI CUENTA</h4>
+                    <ul>
+                        <li><a href="cuenta.html">Ingresar</a></li>
+                        <li><a href="carrito.html">Ver pedidos </a></li>
+                        <li><a href="registrate.html">Crear Cuenta</a></li>   
+                    </ul>
+            </div>
+            <div class="contenido-ft">
+                <h4>ATENCION AL CLIENTE</h4>
+                    <ul>
+                        <li><a href="envio.html">Politicas de Envio</a></li>
+                        <li><a href="privacidad.html">Politicas de Privacidad</a></li>
+                        <li><a href="devoluciones.html">Politicas de Devoluciones</a></li>
+                        <li><a href="terminos.html">Terminos y condiciones</a></li>
+                    </ul>
+            </div>
+            <div class="contenido-ft">
+                <h4>SUSCRIBETE</h4>
+                    <form action="#" id="form-suscripcion">
+                        <label for="">Suscribete y recibe nuestras últimas ofertas.</label><br><br>
+                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                        <br><br>
+                        <input type="checkbox" id="acepto" name="acepto" required>
+                        <label for="acepto">Acepto los <a href="terminos.html">Términos y Condiciones.</a></label>
+                        <br><br>
+                        <input id="boton" type="submit" value="Suscribirse">
+                    </form>
+            </div>
+       </section>
+       <section id="final-footer">
+        <p>&copy; Entre Hojas Libreria Virtual 2025. Todos los derechos reservados</p>
+        <img src="../Imagenes/LOGO_UNSA.png" alt="logo-unsa">
+       </section>
+    </footer>
+    <a href="https://w.app/hadbee" class="whatsapp-btn" target="_blank">
+        <img src="../Imagenes/icono-wp.png" alt="WhatsApp">
+    </a>
+    <script src="../JS/oficial.js"></script>
+    <script src="../JS/blog.js"></script>
+</body>
+</html>
