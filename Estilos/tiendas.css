@@ -72,7 +72,9 @@
 .btn-mapa:hover {
     background-color: rgb(34, 100, 100);
 }
-
+.carrusel-slide img { 
+    width: 800px;
+}
 /* Responsive */
 @media (max-width: 768px) {
     .hero-tiendas h1 {

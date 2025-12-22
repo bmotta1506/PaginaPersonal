@@ -1,4 +1,4 @@
-/* Carrusel */
+/* Carrusel*/
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -10,11 +10,13 @@ main {
 }
 .carrusel-destacados {
     position: relative;
-    max-width: 1000px;
+    width: 100%;        /* Ocupa todo el ancho del contenedor main */
+    max-width: 1400px;  /* Un ancho máximo elegante para pantallas grandes */
+    height: 500px;      /* Aumentamos la altura de 350px a 500px */
     margin: 120px auto 40px;
-    height: 350px;
     overflow: hidden;
     border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 .carrusel-slide { 
     display: none; 
@@ -24,10 +26,11 @@ main {
     display: block; 
     animation: fadeIn 0.5s; 
 }
-.carrusel-slide img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+.carrusel-slide img {
+    width: 100%;        /* Se ajusta al ancho del contenedor automáticamente */
+    height: 100%;       /* Ocupa toda la altura (los 500px) */
+    object-fit: cover;  /* Importante: llena el espacio sin deformarse */
+    display: block;
 }
 
 .titulo-categoria { 
