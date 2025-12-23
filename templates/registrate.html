@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrate</title>
-    <link rel="stylesheet" href="../Estilos/styles.css">
-    <link rel="stylesheet" href="../Estilos/registrate.css">
+    <link rel="stylesheet" href="/static/Estilos/styles.css">
+    <link rel="stylesheet" href="/static/Estilos/registrate.css">
 </head>
 <body>
     <header>
         <figure id="logo">
-            <a href="index.html"><img src="../Imagenes/logo-libreria.png" alt="logo"></a>
+            <a href="/"><img src="/static/Imagenes/logo-libreria.png" alt="logo"></a>
         </figure>
         <div class="header-buttons">
             <button id="hamburger" aria-label="Abrir menú">
-                <img src="../Imagenes/menu-hamburguesa.png" alt="Abrir menú" class="icono-menu">
+                <img src="/static/Imagenes/menu-hamburguesa.png" alt="Abrir menú" class="icono-menu">
             </button> 
         </div>
        
         <nav id="navOficial">
         <ul>
             <li>
-                <a href="blog.html">
-                    <img src="../Imagenes/logo-blog.png" alt="" class="nav-icon">Blog
+                <a href="/blog">
+                    <img src="/static/Imagenes/logo-blog.png" alt="" class="nav-icon">Blog
                 </a>
             </li>
             <li>
-                <a href="tiendas.html">
-                    <img src="../Imagenes/logo - tiendas.png" alt="" class="nav-icon">Tiendas
+                <a href="/tiendas">
+                    <img src="/static/Imagenes/logo - tiendas.png" alt="" class="nav-icon">Tiendas
                 </a>
             </li>
             <li>
-                <a href="registrate.html">
-                    <img src="../Imagenes/logo-registro.png" alt="" class="nav-icon">Registrate
+                <a href="/registrate">
+                    <img src="/static/Imagenes/logo-registro.png" alt="" class="nav-icon">Registrate
                 </a>
             </li>
             <li>
-                <a href="carrito.html">
-                    <img src="../Imagenes/logo-carrito.png" alt="" class="nav-icon">Carrito
+                <a href="/carrito">
+                    <img src="/static/Imagenes/logo-carrito.png" alt="" class="nav-icon">Carrito
                 </a>
             </li>
         </ul>
@@ -47,85 +47,72 @@
     <main class="contenedor-cuenta">
         <section class="tarjeta-cuenta">
             <div class="encabezado-cuenta">
-                <img src="../Imagenes/logo-registro.png" alt="Registro" class="img-cuenta">
+                <img src="/static/Imagenes/logo-registro.png" alt="Registro" class="img-cuenta">
                 <h1>Crea tu cuenta</h1>
                 <p>Únete a <strong>Entre Hojas</strong> y disfruta de ofertas exclusivas</p>
             </div>
 
-            <form action="#" id="form-registro">
+            <form action="/guardar_usuario" method="POST" id="form-registro">
                 <div class="fila-input">
                     <div class="grupo-entrada">
                         <label for="reg-nombre">Nombres</label>
-                        <input type="text" id="reg-nombre" placeholder="Tu nombre" required>
+                        <input type="text" id="reg-nombre" name="nombre" placeholder="Tu nombre" required>
                     </div>
                     <div class="grupo-entrada">
                         <label for="reg-apellido">Apellidos</label>
-                        <input type="text" id="reg-apellido" placeholder="Tu apellido" required>
+                        <input type="text" id="reg-apellido" name="apellido" placeholder="Tu apellido" required>
                     </div>
                 </div>
 
                 <div class="fila-input">
                     <div class="grupo-entrada">
-                        <label for="reg-dni">DNI </label>
-                        <input type="text" id="reg-dni" placeholder="8 dígitos"  required>
+                        <label for="reg-dni">DNI</label>
+                        <input type="text" id="reg-dni" name="dni" placeholder="8 dígitos" required>
                     </div>
                     <div class="grupo-entrada">
                         <label for="reg-celular">Celular</label>
-                        <input type="tel" id="reg-celular" placeholder="987..."  required>
+                        <input type="tel" id="reg-celular" name="celular" placeholder="987..." required>
                     </div>
                 </div>
 
                 <div class="grupo-entrada">
                     <label for="reg-email">Correo Electrónico</label>
-                    <input type="email" id="reg-email" placeholder="ejemplo@correo.com" required>
+                    <input type="email" id="reg-email" name="email" placeholder="ejemplo@correo.com" required>
                 </div>
 
                 <div class="grupo-entrada">
                     <label for="reg-pass">Contraseña</label>
                     <div class="input-password-wrapper">
-                        <input type="password" id="reg-pass" placeholder="Mínimo 6 caracteres"  required>
-                        
+                        <input type="password" id="reg-pass" name="password" placeholder="Mínimo 6 caracteres" required>
                     </div>
-                </div>
-
-                <div class="grupo-entrada">
-                    <label for="reg-pass-confirm">Confirmar Contraseña</label>
-                    <div class="input-password-wrapper">
-                        <input type="password" id="reg-pass-confirm" placeholder="Repite tu contraseña" required>
-                    </div>
-                </div>
-
-                <div class="terminos-check">
-                    <input type="checkbox" id="reg-terminos" required>
-                    <label for="reg-terminos">He leído y acepto los <a href="terminos.html" target="_blank">Términos y Condiciones</a></label>
                 </div>
 
                 <button type="submit" class="boton-cuenta">Registrarme</button>
             </form>
 
             <div class="pie-cuenta">
-                <p>¿Ya tienes cuenta? <a href="cuenta.html">Inicia sesión</a></p>
+                <p>¿Ya tienes cuenta? <a href="/cuenta">Inicia sesión</a></p>
             </div>
         </section>
     </main>
     <footer>
         <section id="caracteristicas">
             <div class="item-caracteristica">
-                <img src="../Imagenes/icono-envio.png" alt="Envío">
+                <img src="/static/Imagenes/icono-envio.png" alt="Envío">
                 <div class="texto-car">
                     <h3>Envío para todo el Perú</h3>
                     <p>Tus productos directo a tu casa</p>
                 </div>
             </div>
             <div class="item-caracteristica">
-                <img src="../Imagenes/icono-segura.png" alt="Compra segura">
+                <img src="/static/Imagenes/icono-segura.png" alt="Compra segura">
                 <div class="texto-car">
                     <h3>100% Seguras</h3>
                     <p>Tus compras son 100% protegidas</p>
                 </div>
             </div>
             <div class="item-caracteristica">
-                <img src="../Imagenes/icono-equipo.png" alt="Soporte">
+                <img src="/static/Imagenes/icono-equipo.png" alt="Soporte">
                 <div class="texto-car">
                     <h3>Equipo Especializado</h3>
                     <p>Te ayudamos en lo que necesites</p>
@@ -134,37 +121,37 @@
         </section>
        <section id="info-footer">
             <div id="nuestrasRedes">
-                <a href="index.html"><img src="../Imagenes/logo-libreria.png" alt="logo"></a>
+                <a href="/"><img src="/static/Imagenes/logo-libreria.png" alt="logo"></a>
                 <h4>NUESTRAS REDES</h4>
                     <ul>
-                        <li><a href="https://www.facebook.com/" target="_blank"><img src="../Imagenes/FB-logo.png" alt="FB"></a></li>
-                        <li><a href="https://www.tiktok.com/" target="_blank"><img src="../Imagenes/TK-logo.png" alt="TK"></a></li>
-                        <li><a href="https://x.com/" target="_blank"><img src="../Imagenes/X-logo (2).png" alt="X"></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><img src="/static/Imagenes/FB-logo.png" alt="FB"></a></li>
+                        <li><a href="https://www.tiktok.com/" target="_blank"><img src="/static/Imagenes/TK-logo.png" alt="TK"></a></li>
+                        <li><a href="https://x.com/" target="_blank"><img src="/static/Imagenes/X-logo (2).png" alt="X"></a></li>
                     </ul>
             </div>
             <div class="contenido-ft">
                 <h4>SOBRE NOSOTROS</h4>
                     <ul>
-                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                        <li><a href="tiendas.html">Nuestras tiendas</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/nosotros">Sobre Nosotros</a></li>
+                        <li><a href="/tiendas">Nuestras tiendas</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
             </div>
             <div class="contenido-ft">
                 <h4>MI CUENTA</h4>
                     <ul>
-                        <li><a href="cuenta.html">Ingresar</a></li>
-                        <li><a href="carrito.html">Ver pedidos </a></li>
-                        <li><a href="registrate.html">Crear Cuenta</a></li>      
+                        <li><a href="/cuenta">Ingresar</a></li>
+                        <li><a href="/carrito">Ver pedidos </a></li>
+                        <li><a href="/registrate">Crear Cuenta</a></li>      
                     </ul>
             </div>
             <div class="contenido-ft">
                 <h4>ATENCION AL CLIENTE</h4>
                     <ul>
-                        <li><a href="envio.html">Politicas de Envio</a></li>
-                        <li><a href="privacidad.html">Politicas de Privacidad</a></li>
-                        <li><a href="devoluciones.html">Politicas de Devoluciones</a></li>
-                        <li><a href="terminos.html">Terminos y condiciones</a></li>
+                        <li><a href="/envio">Politicas de Envio</a></li>
+                        <li><a href="/privacidad">Politicas de Privacidad</a></li>
+                        <li><a href="/devoluciones">Politicas de Devoluciones</a></li>
+                        <li><a href="/terminos">Terminos y condiciones</a></li>
                     </ul>
             </div>
             <div class="contenido-ft">
@@ -174,7 +161,7 @@
                         <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
                         <br><br>
                         <input type="checkbox" id="acepto" name="acepto" required>
-                        <label for="acepto">Acepto los <a href="terminos.html">Términos y Condiciones.</a></label>
+                        <label for="acepto">Acepto los <a href="/terminos">Términos y Condiciones.</a></label>
                         <br><br>
                         <input id="boton" type="submit" value="Suscribirse">
                     </form>
@@ -182,13 +169,13 @@
        </section>
        <section id="final-footer">
         <p>&copy; Entre Hojas Libreria Virtual 2025. Todos los derechos reservados</p>
-        <img src="../Imagenes/LOGO_UNSA.png" alt="logo-unsa">
+        <img src="/static/Imagenes/LOGO_UNSA.png" alt="logo-unsa">
        </section>
     </footer>
     <a href="https://w.app/hadbee" class="whatsapp-btn" target="_blank">
-        <img src="../Imagenes/icono-wp.png" alt="WhatsApp">
+        <img src="/static/Imagenes/icono-wp.png" alt="WhatsApp">
     </a>
-    <script src="../JS/oficial.js"></script>
-    <script src="../JS/validaciones.js"></script>
+    <script src="/static/JS/oficial.js"></script>
+    <script src="/static/JS/validaciones.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const article = document.createElement('article');
             article.className = 'item-carrito';
             article.innerHTML = `
-                <img src="${item.imagen}" alt="${item.titulo}" onerror="this.src='../Imagenes/logo-libreria.png'">
+                <img src="${item.imagen}" alt="${item.titulo}" onerror="this.src='/static/Imagenes/logo-libreria.png'">
                 <div class="detalles-item">
                     <h3>${item.titulo}</h3>
                     <p>Autor: ${item.autor || 'Desconocido'}</p>
@@ -79,7 +79,7 @@ const btnPagar = document.querySelector('.btn-pagar');
 
             localStorage.removeItem('carrito');
 
-            window.location.href = "index.html";
+            window.location.href = "/";
         });
     }
 });
